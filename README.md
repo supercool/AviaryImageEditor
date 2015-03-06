@@ -12,7 +12,7 @@ To install Aviary Image Editor, follow these steps:
 3. 	Register for an Adobe Creative SDK API key. Without an API key you will not be able to use the plugin. Once you have your API key use it to set the API key for the plugin through the plugin's settings page.
 4.  With your API key set you should now be able to use the plugin.
 
-### Basic Usage Example
+## Basic Usage Example
 
 	With the plugin successfully installed follow these steps to make edits to images.
 
