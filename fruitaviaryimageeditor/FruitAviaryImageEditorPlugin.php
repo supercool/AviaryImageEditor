@@ -43,30 +43,33 @@ class FruitAviaryImageEditorPlugin extends BasePlugin
 
     public function init() 
     {
-        craft()->templates->includeJsResource('fruitaviaryimageeditor/js/editor.js');
 
-        $settings = $this->getSettings();
-        $aviaryTools = is_array($settings['aviaryTools']) ? '[\''.implode ("', '", $settings['aviaryTools']).'\']' : '\'all\'';
 
-        $js = "
-            var Fruit = {
-                featherEditor : new Aviary.Feather({
-                    apiKey: '".$settings['aviaryApiKey']."',
-                    tools: ".$aviaryTools.",
-                    enableCORS: '".$settings['enableCORS']."' ? true : false,
-                    theme: '".$settings['aviaryTheme']."'
-            }),
+        if (craft()->request->isCpRequest()) {
+            craft()->templates->includeJsResource('fruitaviaryimageeditor/js/editor.js');
+            $settings = $this->getSettings();
+            $aviaryTools = is_array($settings['aviaryTools']) ? '[\''.implode ("', '", $settings['aviaryTools']).'\']' : '\'all\'';
 
-            launchEditor : function (id, src, options) {
-                var defaults = {
-                    image: id,
-                    url: src
-                }
-                var options = $.extend({}, defaults, options);
-                this.featherEditor.launch(options);
-                }
-            };
-        ";
-        craft()->templates->includeJs($js);
+            $js = "
+                var Fruit = {
+                    featherEditor : new Aviary.Feather({
+                        apiKey: '".$settings['aviaryApiKey']."',
+                        tools: ".$aviaryTools.",
+                        enableCORS: '".$settings['enableCORS']."' ? true : false,
+                        theme: '".$settings['aviaryTheme']."'
+                }),
+
+                launchEditor : function (id, src, options) {
+                    var defaults = {
+                        image: id,
+                        url: src
+                    }
+                    var options = $.extend({}, defaults, options);
+                    this.featherEditor.launch(options);
+                    }
+                };
+            ";
+            craft()->templates->includeJs($js);
+        }
     }
 }
