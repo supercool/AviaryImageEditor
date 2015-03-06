@@ -14,13 +14,13 @@ To install Aviary Image Editor, follow these steps:
 
 ## Basic Usage Example
 
-	With the plugin successfully installed follow these steps to make edits to images.
+With the plugin successfully installed follow these steps to make edits to images.
 
-	1.	Navigate to your Assets page in Craft.
-	2.	Tick the image you wish to edit (only one image can be edited at a time).
-	3.	From the settings menu that appears when you tick an asset select Edit Image. The settings menu is the same one that includes other functions such as 'Rename file' and 'delete...'. 
-	4.	The Aviary Image editor should now appear. From here you can make edits to your image.
-	5.  Once you have finished making changes to your image press save and your image will either be saved as a new image with a new name or it will overwrite the existing image. You can change the default save image behaviour through the plugin's settings page.
+1.	Navigate to your Assets page in Craft.
+2.	Tick the image you wish to edit (only one image can be edited at a time).
+3.	From the settings menu that appears when you tick an asset select Edit Image. The settings menu is the same one that includes other functions such as 'Rename file' and 'delete...'. 
+4.	The Aviary Image editor should now appear. From here you can make edits to your image.
+5.  Once you have finished making changes to your image press save and your image will either be saved as a new image with a new name or it will overwrite the existing image. You can change the default save image behaviour through the plugin's settings page.
 
 
 ## Roadmap
