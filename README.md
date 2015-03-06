@@ -14,7 +14,7 @@ To install Aviary Image Editor, follow these steps:
 
 ## Basic Usage Example
 
-With the plugin successfully installed follow these steps to make edits to images.
+With the plugin successfully installed follow these steps to make edits to images:
 
 1.	Navigate to your Assets page in Craft.
 2.	Tick the image you wish to edit (only one image can be edited at a time).
