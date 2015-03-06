@@ -15,7 +15,7 @@ class FruitAviaryImageEditorPlugin extends BasePlugin
 
     function getVersion()
     {
-        return '0.9';
+        return '0.9.1';
     }
 
     function getDeveloper()
