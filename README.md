@@ -32,6 +32,10 @@ With the plugin successfully installed follow these steps to make edits to image
 
 ## Changelog
 
+### 0.9.1
+
+* Removed unnecessary javascript.
+* Changed so that JS is only loaded when request is from the craft CP.
 
 ### 0.9
 
