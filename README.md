@@ -1,6 +1,8 @@
 # Aviary Image Editor Plugin for Craft
 
-An image editor plugin for craft that makes use of the Aviary Image Editor from Adobe (https://developers.aviary.com/). The plugin allows you to make edits to images through craft. The image edit tools that are aviable include, but are limited to: applying various effects, cropping/resizing, adding text to the image and tweaking various image properties such as the contrast or brightness.
+An image editor plugin for craft that makes use of the Aviary Image Editor from Adobe (https://developers.aviary.com/). 
+
+The plugin allows you to make edits to images through craft. The image edit tools that are aviable include, but are limited to: applying various effects, cropping/resizing, adding text to the image and tweaking various image properties such as the contrast or brightness.
 
 
 ## Installation
