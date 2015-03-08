@@ -34,6 +34,11 @@ With the plugin successfully installed follow these steps to make edits to image
 
 ## Changelog
 
+### 0.9.2
+
+* Fixed spelling mistake on settings page.
+* Updated the readme file to include extra information regarding running the plugin locally.
+
 ### 0.9.1
 
 * Removed unnecessary javascript.
