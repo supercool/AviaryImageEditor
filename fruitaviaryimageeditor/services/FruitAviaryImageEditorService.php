@@ -7,7 +7,13 @@ class FruitAviaryImageEditorService extends BaseApplicationComponent
     {
 
 		$folder = craft()->assets->getFolderById($folderId);
-		$newImageData = file_get_contents($aviaryPath);
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $aviaryPath);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$newImageData = curl_exec($ch);
+		curl_close($ch);
+
 		$tempPath = craft()->path->getTempPath();
 		IOHelper::writeToFile($tempPath.$fileName, $newImageData);
 		$success = craft()->assets->insertFileByLocalPath($tempPath.$fileName, $fileName, $folderId, $imageOverwrite);
