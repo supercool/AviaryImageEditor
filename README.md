@@ -34,6 +34,12 @@ With the plugin successfully installed follow these steps to make edits to image
 
 ## Changelog
 
+### 0.9.3
+
+Thanks to Christian Steger from Italy for pointing out these two updates!
+* Fixed security hole caused by file_get_contents(). Replaced with cURL.
+* Introduced support for different languages.
+
 ### 0.9.2
 
 * Fixed spelling mistake on settings page.
