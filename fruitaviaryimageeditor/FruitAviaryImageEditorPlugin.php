@@ -49,6 +49,7 @@ class FruitAviaryImageEditorPlugin extends BasePlugin
             craft()->templates->includeJsResource('fruitaviaryimageeditor/js/editor.js');
             $settings = $this->getSettings();
             $aviaryTools = is_array($settings['aviaryTools']) ? '[\''.implode ("', '", $settings['aviaryTools']).'\']' : '\'all\'';
+            $user = craft()->userSession->user;
 
             $js = "
                 var Fruit = {
@@ -56,7 +57,8 @@ class FruitAviaryImageEditorPlugin extends BasePlugin
                         apiKey: '".$settings['aviaryApiKey']."',
                         tools: ".$aviaryTools.",
                         enableCORS: '".$settings['enableCORS']."' ? true : false,
-                        theme: '".$settings['aviaryTheme']."'
+                        theme: '".$settings['aviaryTheme']."',
+                        language: '".substr($user['preferredLocale'], 0, 2)."'
                 }),
 
                 launchEditor : function (id, src, options) {
