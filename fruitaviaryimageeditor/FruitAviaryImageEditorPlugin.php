@@ -41,12 +41,12 @@ class FruitAviaryImageEditorPlugin extends BasePlugin
         ));
     }
 
-    public function init() 
+    public function init()
     {
 
 
         if (craft()->request->isCpRequest()) {
-            craft()->templates->includeJsResource('fruitaviaryimageeditor/js/editor.js');
+            craft()->templates->includeJsFile('https://dme0ih8comzn4.cloudfront.net/imaging/v1/editor.js');
             $settings = $this->getSettings();
             $aviaryTools = is_array($settings['aviaryTools']) ? '[\''.implode ("', '", $settings['aviaryTools']).'\']' : '\'all\'';
             $user = craft()->userSession->user;
