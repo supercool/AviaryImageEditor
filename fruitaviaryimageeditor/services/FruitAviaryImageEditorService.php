@@ -6,6 +6,8 @@ class FruitAviaryImageEditorService extends BaseApplicationComponent
     public function saveImage($folderId, $fileName, $aviaryPath, $imageOverwrite)
     {
 
+    $fileName = explode('?', $fileName)[0];
+
 		$folder = craft()->assets->getFolderById($folderId);
 
 		$ch = curl_init();
