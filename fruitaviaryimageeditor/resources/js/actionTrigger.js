@@ -9,7 +9,7 @@ Craft.AviaryActionTrigger = Garnish.Base.extend(
 	classHandle: null,
 	aviaryApiKey: null,
 	fileExtensionsJSArray: null,
-	imageOverwrite: null,
+	imageOverwrite: false,
 
 	init: function(classHandle, aviaryApiKey, fileExtensionsJSArray, imageOverwrite)
 	{
@@ -64,9 +64,16 @@ Craft.AviaryActionTrigger = Garnish.Base.extend(
 						var data = {
 							folderId: Craft.elementIndex.$source.data('key').split(':')[1],
 							fileName: $element.data('url').split('/').pop(),
-							aviaryPath: newURL,
-							imageOverwrite: that.imageOverwrite
+							aviaryPath: newURL
 						};
+
+						if ( that.imageOverwrite !== false )
+						{
+							data = $.extend({}, data, {
+								imageOverwrite: true
+							});
+						}
+
 						Craft.postActionRequest('fruitAviaryImageEditor/saveImage', data, function(response){
 
 							if(response.success)
